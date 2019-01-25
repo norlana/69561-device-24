@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Светлана Нехай](https://up.htmlacademy.ru/htmlcss/24/user/69561).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Фарига] https://htmlacademy.ru/profile/maximfariga.
 
 ---
 

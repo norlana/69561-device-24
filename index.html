@@ -2,151 +2,146 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Девайс</title>
+  <meta charset="UTF-8">
+  <title>Device - официальный магазин</title>
+  <link rel="stylesheet" href="path/style.css">
 </head>
 
 <body class="home-page">
-  <header class="main-header">
-    <div class="container">
-      <div class="wrapper">
-        <h1 class="main-header__title visually-hidden">
-          Онлайн-магазин гаджетов Девайс
-        </h1>
 
-        <nav class="user-nav">
-          <a class="logo-link">
-            <img class="logo" src="https://via.placeholder.com/163x35/000000/FFFFFF?text=DEVICE LOGO" alt="Логотип магазина Девайс" width="163" height="35">
-          </a>
-          <div class="nav-wrapper">
-            <form class="search-form" action="#" method="post">
-              <label class="visually-hidden" for="search-field"></label>
-              <input type="search" name="search-field" id="search-field" placeholder="Поиск по сайту">
-            </form>
-            <ul class="user-menu">
-              <li>
-                <ul>
-                  <li>
-                    <a class="login-in" href="#">Войти</a>
-                  </li>
-                  <li>
-                    <a class="login-out" href="#"></a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li>
-                    <a class="compare" href="#">Сравнить</a>
-                  </li>
-                  <li>
-                    <a class="basket" href="#">Корзина</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <nav class="main-nav">
-          <ul class="dropdown-menu">
-            <li class="dropdown-menu__item">
-              <a href="#">Каталог товаров</a>
-              <ul class="submenu">
-                <li>
-                  <ul class="submenu__list">
-                    <li class="submenu__item"><a href="#">Виртуальная реальность</a></li>
-                    <li class="submenu__item"><a href="#">Моноподы для селфи</a></li>
-                    <li class="submenu__item"><a href="#">Экшн-камеры</a></li>
-                  </ul>
+  <header class="page-header container">
+    <div class="page-header__wrapper">
+      <h1 class="visually-hidden">
+        Онлайн-магазин гаджетов Девайс
+      </h1>
+      <nav class="user-nav page-header__nav">
+        <a class="logo user-nav__logo">
+          <img class="logo__image" src="https://via.placeholder.com/163x35/000000/FFFFFF?text=DEVICE LOGO" alt="Логотип магазина Девайс" width="163" height="35">
+        </a>
+        <div class="user-nav__row">
+          <form class="search" action="#" method="post">
+            <label class="visually-hidden" for="search-field"></label>
+            <input class="search__input" type="search" name="search-field" id="search-field" placeholder="Поиск по сайту">
+            <button class="button-search search__button" type="submit">Найти</button>
+          </form>
+          <ul class="user-menu">
+            <li class="user-menu__item">
+              <ul class="login">
+                <li class="login__item sign-in">
+                  <a class="login__link" href="#">Войти</a>
                 </li>
-                <li>
-                  <ul class="submenu__list">
-                    <li class="submenu__item"><a href="#">Фитнес-браслеты</a></li>
-                    <li class="submenu__item"><a href="#">Умные часы</a></li>
-                  </ul>
+                <li class="login__item sign-out">
+                  <a class="login__link" href="#"></a>
                 </li>
-                <li>
-                  <ul class="submenu__list">
-                    <li class="submenu__item"><a href="#">Квадрокоптеры</a></li>
-                  </ul>
+              </ul>
+            </li>
+            <li class="user-menu__item">
+              <ul class="buyers-options">
+                <li class="buyers-options__item">
+                  <a class="buyers-options__link compare" href="#">Сравнить</a>
+                </li>
+                <li class="buyers-options__item">
+                  <a class="buyers-options__link cart" href="#">Корзина</a>
                 </li>
               </ul>
             </li>
           </ul>
-          <ul class="info-menu">
-            <li class="info-menu__item">
-              <a href="#">Доставка</a>
-            </li>
-            <li class="info-menu__item">
-              <a href="#">Гарантия</a>
-            </li>
-            <li class="info-menu__item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
+      <nav class="main-nav page-header__nav">
+        <ul class="main-menu">
+          <li class="main-menu__item">
+            <a href="#">Каталог товаров</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <ul class="submenu__list">
+                  <li class="submenu__sub-item"><a href="#">Виртуальная реальность</a></li>
+                  <li class="submenu__sub-item"><a href="#">Моноподы для селфи</a></li>
+                  <li class="submenu__sub-item"><a href="#">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li class="submenu__item">
+                <ul class="submenu__list">
+                  <li class="submenu__sub-item"><a href="#">Фитнес-браслеты</a></li>
+                  <li class="submenu__sub-item"><a href="#">Умные часы</a></li>
+                </ul>
+              </li>
+              <li class="submenu__item">
+                <ul class="submenu__list">
+                  <li class="submenu__sub-item"><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main class="main">
-    <div class="main-info">
-      <section class="about-us">
-        <h2 class="about-as__title h2-title">О нас</h2>
-        <p class="text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="text">Мы можем доставить ваш товар в самые отдаленные точки России! <span class="uppercase">DEVICE</span> работает со многими транспортными компаниями:</p>
-        <ul class="list">
-          <li class="list-item"><a href=""><b>Деловые линии</b></a></li>
-          <li class="list-item"><a href=""><b>Автотрейдинг</b></a></li>
-          <li class="list-item"><a href=""><b>ЖелДорЭкспедиция</b></a></li>
-          <a class="button" href="#"><b>ПОДРОБНЕЕ О НАС</b></a>
+    <div class="information">
+      <section class="information__column about-us">
+        <h2 class="information__title">О нас</h2>
+        <p class="information__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="information__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="information__list">
+          <li class="information__item"><a href="#">Деловые линии</a></li>
+          <li class="information__item"><a href="#">Автотрейдинг</a></li>
+          <li class="information__item"><a href="#">ЖелДорЭкспедиция</a></li>
+          <a class="information__button button" href="#">ПОДРОБНЕЕ О НАС</a>
         </ul>
       </section>
-      <section class="contacts">
-        <h2 class="contacts__title h2-title">Контакты</h2>
-        <p class="text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="map">
-          <img class="mape-image" src="https://via.placeholder.com/560x222/D3D3D3/000000?text=DEVICE on map" alt="Адрес нашей компании: г. Москва, ул. Строителей 15" width="560" height="222">
-          <a class="button" href="#"><b>НАПИШИТЕ НАМ</b></a>
-        </div>
+      <section class="information__column contacts">
+        <h2 class="information__title">Контакты</h2>
+        <p class="information__text text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <a class="map" href="#">
+          <img class="map__image" src="https://via.placeholder.com/560x222/D3D3D3/000000?text=DEVICE on map" alt="Адрес нашей компании: г. Москва, ул. Строителей 15" width="560" height="222">
+        </a>
+        <a class="information__button button" href="#">НАПИШИТЕ НАМ</a>
       </section>
     </div>
   </main>
 
-  <footer class="main-footer">
-    <div class="container">
-      <div class="user-nav">
-        <a class="logo-link">
-          <img class="logo" src="https://via.placeholder.com/163x35/f0c52e/000000?text=DEVICE LOGO" alt="Логотип магазина Девайс" width="163" height="35">
-        </a>
-        <ul class="user-menu">
-          <li>
-            <ul>
-              <li>
-                <a class="login-in" href="#">Войти</a>
-              </li>
-              <li>
-                <a class="login-out" href="#"></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>
-                <a class="compare" href="#">Сравнить</a>
-              </li>
-              <li>
-                <a class="basket" href="#">Корзина</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+  <footer class="page-footer container">
+    <div class="user-nav page-footer__nav">
+      <a class="logo">
+        <img class="logo__image" src="https://via.placeholder.com/163x35/f0c52e/000000?text=DEVICE LOGO" alt="Логотип магазина Девайс" width="163" height="35">
+      </a>
+      <ul class="user-menu">
+        <li class="user-menu__item">
+          <ul class="login">
+            <li class="login__item sign-in">
+              <a class="login__link" href="#">Войти</a>
+            </li>
+            <li class="login__item sign-out">
+              <a class="login__link" href="#"></a>
+            </li>
+          </ul>
+        </li>
+        <li class="user-menu__item">
+          <ul class="buyers-options">
+            <li class="buyers-options__item">
+              <a class="buyers-options__link compare" href="#">Сравнить</a>
+            </li>
+            <li class="buyers-options__item">
+              <a class="buyers-options__link cart" href="#">Корзина</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
 
-    <div class="info">
-      <p class="address">г. Москва, ул. Строителей, 15</p>
+    <div class="info-nav page-footer__nav">
+      <p class="info-nav__text address">г. Москва, ул. Строителей, 15</p>
       <ul class="info-menu">
         <li class="info-menu__item">
           <a href="#">Доставка</a>
@@ -158,20 +153,22 @@
           <a href="#">Контакты</a>
         </li>
       </ul>
-      <p class="phone">
-        <span>Тел.: </span><a href="tel: +74954959595">+7 (495) 495-95-95</a>
+      <p class="info-nav__text phone">
+        Тел.: <a href="tel: +74954959595">+7 (495) 495-95-95</a>
       </p>
     </div>
+
     <div class="social">
-      <div class="footer-links">
-        <ul class="social-links">
-          <li class="social-links_item"><a class="facebook" href="#">Фейсбук</a></li>
-          <li class="social-links_item"><a class="instagram" href="#">Инстаграм</a></li>
-          <li class="social-links_item"><a class="twitter" href="#">Твиттер</a></li>
-        </ul>
-        <a href="#" class="social__logo-link"><img class="academy-logo" src="https://via.placeholder.com/27x34/f0c52e/000000?text=HA" alt="Логотип разработчика сайта - HTML Academy" width="26.943" height="34.09"></a>
-      </div>
+      <ul class="social__list">
+        <li class="social__item"><a class="facebook" href="#">Фейсбук</a></li>
+        <li class="social__item"><a class="instagram" href="#">Инстаграм</a></li>
+        <li class="social__item"><a class="twitter" href="#">Твиттер</a></li>
+        <li class="social__item copyright">
+          <a class="copyright__logo" href="#"><img class="copyright__logo-image" src="https://via.placeholder.com/27x34/f0c52e/000000?text=HA" alt="Логотип разработчика сайта - HTML Academy" width="26.943" height="34.09"></a>
+        </li>
+      </ul>
     </div>
   </footer>
 </body>
+
 </html>

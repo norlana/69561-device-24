@@ -10,9 +10,10 @@
 <body class="inner-page">
 <header class="page-header container">
     <div class="page-header__wrapper">
+      <!-- top row --> 
       <nav class="user-nav page-header__nav">
         <a class="logo user-nav__logo" href="#">
-          <img class="logo__image" src="/img/logo-device.svg" alt="Логотип магазина Девайс" width="163" height="35">
+          <img class="logo__image" src="/img/logotypes/logo-device.svg" alt="Логотип магазина Девайс" width="163" height="35">
         </a>
         <div class="user-nav__row">
           <form class="search" action="#" method="post">
@@ -44,6 +45,7 @@
           </ul>
         </div>
       </nav>
+      <!-- bottom row-->
       <nav class="main-nav page-header__nav">
         <ul class="main-menu">
           <li class="main-menu__item main-menu__item--right--auto">
@@ -84,6 +86,7 @@
   </header>
 
   <main class="main">
+    <!----------------- H1 and BREADCRUMBS ---------------->
     <div class="container">
       <div class="wrapper">
         <h1 class="main__title">
@@ -99,6 +102,7 @@
 
     <div class="content">
       <div class="container content__container">
+       <!----------------- FILTERS ---------------->
         <section class="filters">
           <div class="filters__header">
             <h2 class="filters__title">Фильтр:</h2>
@@ -130,7 +134,7 @@
             <button class="filters__button button" type="submit">Показать</button>
           </form>
         </section>
-
+        <!----------------- CATALOG ---------------->
         <section class="catalog">
           <div class="catalog__header">
             <h2 class="catalog__title">Сортировка:</h2>
@@ -159,7 +163,7 @@
                 </h3>
                 <span class="price">500 руб.</span>
               </div>
-              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/item-1.2.jpg" alt="Бюджетный монопод" width="360" height="380"></a>
+              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/catalog/item-1.jpg" alt="Бюджетный монопод" width="360" height="380"></a>
               <div class="catalog-card__buttons">
                 <button class="add-basket-button button" type="button">В корзину</button>
                 <button class="add-compare-button button" type="button">Добавить к сравнению</button>
@@ -172,7 +176,7 @@
                 </h3>
                 <span class="price">1500 руб.</span>
               </div>
-              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/item-2.2.jpg" alt="Монопод с дополнительными опциями" width="360" height="380"></a>
+              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/catalog/item-2.jpg" alt="Монопод с дополнительными опциями" width="360" height="380"></a>
               <div class="catalog-card__buttons">
                 <button class="add-basket-button button" type="button">В корзину</button>
                 <button class="add-compare-button button" type="button">Добавить к сравнению</button>
@@ -185,7 +189,7 @@
                 </h3>
                 <span class="price">2500 руб.</span>
               </div>
-              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/item-3.4.jpg" alt="Легкий прорезиненный монопод" width="360" height="380"></a>
+              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/catalog/item-3.jpg" alt="Легкий прорезиненный монопод" width="360" height="380"></a>
               <div class="catalog-card__buttons">
                 <button class="add-basket-button button" type="button">В корзину</button>
                 <button class="add-compare-button button" type="button">Добавить к сравнению</button>
@@ -198,13 +202,14 @@
                 </h3>
                 <span class="price">4900 руб.</span>
               </div>
-              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/item-4.3.jpg" alt="Монопод в форме руки" width="360" height="380"></a>
+              <a class="catalog-card__body" href="#"><img class="catalog-card__image" src="/img/catalog/item-4.jpg" alt="Монопод в форме руки" width="360" height="380"></a>
               <div class="catalog-card__buttons">
                 <button class="add-basket-button button" type="button">В корзину</button>
                 <button class="add-compare-button button" type="button">Добавить к сравнению</button>
               </div>
             </article>
           </section>
+          <!-- pagination-->
           <ul class="pagination catalog__footer">
             <li class="pagination__item back"><a href="#">Назад</a></li>
             <li>
@@ -220,12 +225,13 @@
       </div>
     </div>
   </main>
-
+  <!----------------- FOOTER ---------------->
   <footer class="page-footer">
     <div class="page-footer__container container">
+     <!-- top row-->
       <div class="user-nav page-footer__nav">
         <a class="logo" href="#">
-          <img class="logo__image" src="https://via.placeholder.com/163x35/f0c52e/000000?text=DEVICE LOGO" alt="Логотип магазина Девайс" width="163" height="35">
+          <img class="logo__image" src="img/logotypes/logo-device.svg" alt="Логотип магазина Девайс" width="163" height="35">
         </a>
         <ul class="user-menu">
           <li class="user-menu__item">
@@ -250,7 +256,7 @@
           </li>
         </ul>
       </div>
-      
+      <!-- middle row-->
       <div class="info-nav page-footer__nav">
         <p class="info-nav__text address">г. Москва, ул. Строителей, 15</p>
         <ul class="info-menu">
@@ -268,7 +274,7 @@
           Тел.: <a href="tel: +74954959595">+7 (495) 495-95-95</a>
         </p>
       </div>
-      
+      <!-- bottom row-->
       <div class="social">
         <ul class="social__list">
           <li class="social__item"><a class="facebook" href="#">Фейсбук</a></li>
@@ -276,7 +282,7 @@
           <li class="social__item"><a class="twitter" href="#">Твиттер</a></li>
           <li class="social__item copyright">
             <a class="copyright__logo" href="#">
-              <svg class="page-footer__icon academy-icon">
+              <svg class="copyright__icon academy-icon">
                 <use xlink:href="#logo-academy"/>
               </svg>
             </a>
@@ -285,11 +291,11 @@
       </div>
     </div>
   </footer>
-  
+  <!--  SVG display: none  -->
   <svg style="display: none;">
-   <symbol id="logo-academy" viewBox="0 0 27 35">
-    <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
-  </symbol>
+    <symbol id="logo-academy" viewBox="0 0 27 35">
+      <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
+    </symbol>
   </svg>
 </body>
 

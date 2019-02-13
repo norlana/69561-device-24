@@ -19,8 +19,8 @@
           <img class="logo__image" src="img/logotypes/logo-device.svg" alt="Логотип магазина Девайс" width="163" height="35">
         </a>
         <div class="user-nav__row">
-          <form class="search" action="#" method="post">
-            <label class="visually-hidden" for="search-field"></label>
+          <form class="search" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="search-field">Форма поиска по сайту</label>
             <input class="search__input" type="search" name="search-field" id="search-field" placeholder="Поиск по сайту">
             <button class="button-search search__button" type="submit">Найти</button>
           </form>
@@ -57,7 +57,7 @@
               <li class="submenu__item">
                 <ul class="submenu__list">
                   <li class="submenu__sub-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="submenu__sub-item"><a href="#">Моноподы для селфи</a></li>
+                  <li class="submenu__sub-item"><a href="#">Моноподы для селфи </a></li>
                   <li class="submenu__sub-item"><a href="#">Экшн-камеры</a></li>
                 </ul>
               </li>
@@ -181,22 +181,22 @@
       <h2 class="visually-hidden">Популярные категории товаров</h2>
       <ul class="popular__list popular-list">
         <li class="popular-list__item">
-          <a class="popular-list__link" href="#">Виртуальная реальность</a>
+          <a class="popular-list__link virtual" href="#">Виртуальная реальность</a>
         </li>
         <li class="popular-list__item">
-          <a class="popular-list__link" href="#">Моноподы для селфи</a>
+          <a class="popular-list__link monopod" href="#">Моноподы<br> для селфи</a>
         </li>
         <li class="popular-list__item">
-          <a class="popular-list__link" href="#">Экшн-камеры</a>
+          <a class="popular-list__link camera" href="#">Экшн-камеры</a>
         </li>
         <li class="popular-list__item">
-          <a class="popular-list__link" href="#">Фитнес-браслеты</a>
+          <a class="popular-list__link fitness" href="#">Фитнес-браслеты</a>
         </li>
         <li class="popular-list__item">
-          <a class="popular-list__link" href="#">Умные часы</a>
+          <a class="popular-list__link smart" href="#">Умные часы</a>
         </li>
         <li class="popular-list__item">
-          <a class="popular-list__link" href="#">Квадрокоптеры</a>
+          <a class="popular-list__link quadro" href="#">Квадрокоптеры</a>
         </li>
       </ul>
     </section>
@@ -320,7 +320,7 @@
   <!----------------- FOOTER ---------------->
   <footer class="page-footer">
     <div class="page-footer__container container">
-     <!-- top row-->
+      <!-- top row-->
       <div class="user-nav page-footer__nav">
         <a class="logo">
           <img class="logo__image" src="img/logotypes/logo-device.svg" alt="Логотип магазина Девайс" width="163" height="35">
@@ -369,11 +369,11 @@
       <!-- bottom row-->
       <div class="social">
         <ul class="social__list">
-          <li class="social__item"><a class="social__link facebook" href="#">Фейсбук</a></li>
-          <li class="social__item"><a class="social__link instagram" href="#">Инстаграм</a></li>
-          <li class="social__item"><a class="social__link twitter" href="#">Твиттер</a></li>
+          <li class="social__item"><a class="social__link facebook" href="#" aria-label="Девайс на Фейсбук">Фейсбук</a></li>
+          <li class="social__item"><a class="social__link instagram" href="#" aria-label="Девайс в Инстаграм">Инстаграм</a></li>
+          <li class="social__item"><a class="social__link twitter" href="#" aria-label="Девайс в Твиттер">Твиттер</a></li>
           <li class="social__item copyright">
-            <a class="copyright__logo" href="#">
+            <a class="copyright__logo" href="#" aria-label="Разработчик сайта Девайс">
               <svg class="copyright__icon academy-icon">
                 <use xlink:href="#logo-academy" />
               </svg>
@@ -383,7 +383,39 @@
       </div>
     </div>
   </footer>
-<!--  SVG display: none  -->
+
+  <div class="modal-overlay">
+    <section class="feedback modal">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <button aria-label="Закрыть форму" class="feedback__button button-round">X</button>
+      <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="feedback-form__wrapper">
+          <li class="feedback-form__row">
+            <label class="feedback-form__caption" for="name-field">Ваше имя:
+              <input class="feedback-form__input" id="name-field" type="text" name="name" placeholder="Имя Фамилия">
+            </label>
+          </li>
+          <li class="feedback-form__row">
+            <label class="feedback-form__caption" for="email-field">Ваш e-mail:
+              <input class="feedback-form__input" id="email-field" type="email" name="email" placeholder="email@example.com">
+            </label>
+          </li>
+          <li class="feedback-form__row">
+            <label class="feedback-form__caption" for="message-field">Текст письма:
+              <textarea class="feedback-form__textarea" id="message-field" cols="30" rows="10" name="message" placeholder="В свободной форме"></textarea>
+            </label>
+          </li>
+        </ul>
+        <button class="feedback-form__button button" type="submit">Отправить</button>
+      </form>
+    </section>
+    <section class="interactive-map">
+      <h2 class="visually-hidden">Адрес офиса на интерактивной карте.</h2>
+      <button aria-label="Закрыть карту" class="interactive-map__button button-round">X</button>
+      <!--     API яндекс-карт      -->
+    </section>
+  </div>
+  <!--  SVG display: none  -->
   <svg style="display: none;">
     <symbol id="logo-academy" viewBox="0 0 27 35">
       <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" />

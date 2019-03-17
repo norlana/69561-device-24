@@ -212,6 +212,13 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.01em;
 }
 
+.user-menu--theme--dark .user-menu__item-login {
+  width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .user-menu__item-logout {
   margin-left: 20px;
 }
@@ -1018,7 +1025,6 @@ input[type="radio"].visually-hidden {
   text-align: left;
 
   -webkit-font-kerning: none;
-
           font-kerning: none;
 }
 
@@ -1534,7 +1540,13 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.filters__toggle:focus {
+  outline: 0;
+}
+
 .filters__toggle:active {
+  top: -10px;
+  
   width: 22px;
   height: 22px;
 
@@ -1565,10 +1577,18 @@ input[type="radio"].visually-hidden {
   margin-left: -4px;
 }
 
+.toggle-min:active::before {
+  margin-left: -5px;
+}
+
 .toggle-max::before {
   content: "до 5000";
 
   margin-left: -24px;
+}
+
+.toggle-max:active::before {
+  margin-left: -25px;
 }
 
 /*----------- Цвет ----------*/
@@ -1710,6 +1730,7 @@ input[type="radio"].visually-hidden {
 
 .variant__link {
   display: inline-block;
+  vertical-align: top;
 
   color: rgba(0, 0, 0, 0.3);
   word-break: break-all;
@@ -1785,11 +1806,9 @@ input[type="radio"].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
-  padding-left: 73px;
+  padding-left: 34.5px;
+  margin-left: -39px;
 }
 
 .catalog-card {
@@ -1804,6 +1823,8 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-bottom: 46px;
+  margin-left: 39px;
+  width: 360px;
 }
 
 .catalog-card__description {
@@ -1828,6 +1849,10 @@ input[type="radio"].visually-hidden {
   word-break: keep-all;
 }
 
+.catalog-card:nth-of-type(2) .catalog-card__title {
+  padding-right: 40px;
+}
+
 .catalog-card:nth-of-type(3) .catalog-card__title {
   letter-spacing: 0.006em;
 }
@@ -1849,15 +1874,14 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 32px;
+  
 }
 
 .catalog-card__body::before {
@@ -1889,10 +1913,10 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.catalog-card__body:hover .catalog-card__image-link {
+  
+  height: 380px;
   background-color: rgba(238, 238, 238, 1);
+  overflow: hidden;
 }
 
 .catalog-card__body:hover .catalog-card__image {
@@ -1906,6 +1930,7 @@ input[type="radio"].visually-hidden {
 .catalog-card__buttons {
   position: absolute;
   top: 172px;
+  left: 81px;
 
   display: none;
   -webkit-box-orient: vertical;

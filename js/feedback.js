@@ -33,28 +33,28 @@
     close.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.add("modal-close-form");
-      setTimeout(function(){
+      setTimeout(function () {
         popup.classList.remove("modal-show-form");
         popup.classList.remove("modal-close-form");
         feedback.classList.remove("modal-error-form");
-      }, 600);  
+      }, 600);
     });
 
-     userEmail.addEventListener("input", function (event) {
-      if (userEmail.validity.patternMismatch) { 
+    userEmail.addEventListener("input", function (event) {
+      if (userEmail.validity.patternMismatch) {
         userEmail.setCustomValidity("Неверный формат! Верный: email@example.com");
       } else {
         userEmail.setCustomValidity("");
       }
-   });
+    });
 
     userName.addEventListener("input", function (event) {
-      if (userName.validity.patternMismatch) { 
-        userName.setCustomValidity("Допустимы только буквы русского алфавита!");
+      if (userName.validity.patternMismatch) {
+        userName.setCustomValidity("Допустимо использовать только буквы!");
       } else {
         userName.setCustomValidity("");
       }
-   });
+    });
 
     form.addEventListener("submit", function (evt) {
       if (!userName.value || !userEmail.value) {
@@ -63,19 +63,21 @@
         feedback.offsetWidth = feedback.offsetWidth;
         feedback.classList.add("modal-error-form");
       } else if (isStorageSupport) {
-          localStorage.setItem("userName", userName.value);
-          localStorage.setItem("userEmail", userEmail.value);
-      } 
-    });     
+        localStorage.setItem("userName", userName.value);
+        localStorage.setItem("userEmail", userEmail.value);
+      }
+    });
 
     window.addEventListener("keydown", function (evt) {
       if (evt.keyCode === 27) {
         evt.preventDefault();
         if (popup.classList.contains("modal-show-form")) {
           popup.classList.add("modal-close-form");
-          setTimeout(function(){$(popup).removeClass("modal-show-form");},600);
-          setTimeout(function(){$(popup).removeClass("modal-close-form");},600);
-          feedback.classList.remove("modal-error-form");
+          setTimeout(function () {
+            popup.classList.remove("modal-show-form");
+            popup.classList.remove("modal-close-form");
+            feedback.classList.remove("modal-error-form");
+          }, 600);
         }
       }
     });

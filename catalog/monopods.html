@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>DEVICE - Моноподы для селфи</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/normalize.min.css">
   <link rel="stylesheet" href="../css/style.min.css">
 </head>
 
@@ -43,12 +43,12 @@
       <!-- bottom row-->
       <nav class="bar main-bar">
         <ul class="main-menu">
-          <li class="main-menu__item-catalog main-menu__item-catalog--dropdown">
-            <a class="main-menu__link" href="#">Каталог товаров</a>
+          <li class="main-menu-item item-dropdown main-menu__item-catalog">
+            <a class="item-dropdown-link main-menu__link" href="#">Каталог товаров</a>
             <ul class="submenu main-menu__submenu">
               <li class="submenu__item">
                 <a class="submenu__link" href="virtual.html">Виртуальная реальность</a>
-                <a class="submenu__link">Моноподы для селфи </a>
+                <a class="submenu__link submenu__link--current">Моноподы для селфи </a>
                 <a class="submenu__link" href="actions.html">Экшн-камеры</a>
               </li>
               <li class="submenu__item">
@@ -60,13 +60,13 @@
               </li>
             </ul>
           </li>
-          <li class="main-menu__item-delivery">
+          <li class="main-menu-item main-menu__item-delivery">
             <a class="main-menu__link" href="#">Доставка</a>
           </li>
-          <li class="main-menu__item-warranty">
+          <li class="main-menu-item main-menu__item-warranty">
             <a class="main-menu__link" href="#">Гарантия</a>
           </li>
-          <li class="main-menu__item-contacts">
+          <li class="main-menu-item main-menu__item-contacts">
             <a class="main-menu__link" href="#">Контакты</a>
           </li>
         </ul>
@@ -85,9 +85,9 @@
         </h1>
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
           <ol class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="../index.html">Главная</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" aria-current="page">Моноподы для селфи</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current" href="#" aria-current="page">Моноподы для селфи</a></li>
           </ol>
         </nav>
       </div>
@@ -107,13 +107,9 @@
                 <div class="filters__scale">
                   <div class="filters__bar"></div>
                 </div>
-                <div class="filters__toggle toggle-min"></div>
-                <div class="filters__toggle toggle-max"></div>
+                <button class="filters__toggle toggle-min" type="button"></button>
+                <button class="filters__toggle toggle-max" type="button"></button>
               </div>
-              <!--<div class="filters__outputs">
-                <span class="filters__output min-price">от 0</span>
-                <span class="filters__output max-price">до 5000</span>
-              </div>-->
             </fieldset>
             <fieldset class="filters__group color-group">
               <legend class="filters__legend">Цвет</legend>
@@ -169,8 +165,10 @@
                 <a class="catalog-card__image-link" href="#">
                   <img class="catalog-card__image" src="../img/catalog/item-1.jpg" alt="Бюджетный монопод" width="360" height="380">
                 </a>
-                <button class="catalog-card__button add-basket-button button button--size--m" type="button">В корзину</button>
-                <button class="catalog-card__button add-compare-button" type="button">Добавить к сравнению</button>
+                <div class="catalog-card__buttons">
+                  <button class="catalog-card__button add-basket-button button" type="button">В корзину</button>
+                  <button class="add-compare-button" type="button">Добавить к сравнению</button>
+                </div>
               </div>
             </article>
             <article class="catalog-card">
@@ -186,8 +184,10 @@
                 <a class="catalog-card__image-link" href="#">
                 <img class="catalog-card__image" src="../img/catalog/item-2.jpg" alt="Монопод с дополнительными опциями" width="360" height="380">
                 </a>
-                <button class="catalog-card__button add-basket-button button button--size--m" type="button">В корзину</button>
-                <button class="catalog-card__button add-compare-button" type="button">Добавить к сравнению</button>
+                <div class="catalog-card__buttons">
+                  <button class="catalog-card__button add-basket-button button" type="button">В корзину</button>
+                  <button class="add-compare-button" type="button">Добавить к сравнению</button>
+                </div>
               </div>
             </article>
             <article class="catalog-card">
@@ -203,8 +203,10 @@
                 <a class="catalog-card__image-link" href="#">
                 <img class="catalog-card__image" src="../img/catalog/item-3.jpg" alt="Легкий прорезиненный монопод" width="360" height="380">
                 </a>
-                <button class="catalog-card__button add-basket-button button button--size--m" type="button">В корзину</button>
-                <button class="catalog-card__button add-compare-button" type="button">Добавить к сравнению</button>
+                <div class="catalog-card__buttons">
+                  <button class="catalog-card__button add-basket-button button" type="button">В корзину</button>
+                  <button class="add-compare-button" type="button">Добавить к сравнению</button>
+                </div>
               </div>
             </article>
             <article class="catalog-card">
@@ -216,26 +218,28 @@
                 </h3>
                 <span class="catalog-card__price">4 900 руб.</span>
               </div>
-              <div class="catalog-card__body new-product">
+              <div class="catalog-card__body" data-marker="new">
                 <a class="catalog-card__image-link" href="#">
                 <img class="catalog-card__image" src="../img/catalog/item-4.jpg" alt="Монопод в форме руки" width="360" height="380">
                 </a>
-                <button class="catalog-card__button add-basket-button button button--size--m" type="button">В корзину</button>
-                <button class="catalog-card__button add-compare-button" type="button">Добавить к сравнению</button>
+                <div class="catalog-card__buttons">
+                  <button class="catalog-card__button add-basket-button button" type="button">В корзину</button>
+                  <button class="add-compare-button" type="button">Добавить к сравнению</button>
+                </div>
               </div>
             </article>
           </section>
           <!-- pagination-->
           <ul class="catalog__footer pagination">
-            <li class="pagination__item back"><a class="pagination__link" href="#">Назад</a></li>
+            <li class="pagination__item"><a class="pagination__link link-back" href="#">Назад</a></li>
             <li>
               <ol class="pagination-inner">
-                <li class="pagination-inner__item"><a class="pagination-inner__link pagination-inner__link--current" href="#">1</a></li>
+                <li class="pagination-inner__item"><a class="pagination-inner__link pagination-inner__link--current">1</a></li>
                 <li class="pagination-inner__item"><a class="pagination-inner__link" href="#">2</a></li>
                 <li class="pagination-inner__item"><a class="pagination-inner__link" href="#">3</a></li>
               </ol>
             </li>
-            <li class="pagination__item next"><a class="pagination__link" href="#">Вперед</a></li>
+            <li class="pagination__item"><a class="pagination__link link-next" href="#">Вперед</a></li>
           </ul>
         </section>
       </div>
@@ -246,27 +250,27 @@
     <div class="footer__container container">
       <!-- top row-->
       <div class="bar user-bar footer__user-bar">
-        <a class="logo-link logo-device" href="../index.html">
+        <a class="footer__logo logo-link logo-device" href="../index.html">
           <img src="../img/logotypes/logo-device-bright.svg" alt="Логотип магазина Девайс" width="163" height="35">
         </a>
         <ul class="user-menu user-menu--theme--bright footer__user-menu">
-          <li class="user-menu__item-login">
+          <li class="user-menu-item user-menu__item-login">
             <a class="link-login user-menu__link user-menu__link--theme--bright" href="#">Валентин Петухов</a>
           </li>
-          <li class="user-menu__item-logout user-menu__item-logout--block">
+          <li class="user-menu-item user-menu__item-logout user-menu__item-logout--block">
             <a class="link-logout user-menu__link user-menu__link--theme--bright" href="#">Выйти</a>
           </li>
           <li class="user-menu__item-compare">
             <a class="link-compare user-menu__link user-menu__link--theme--bright" href="#">Сравнить</a>
           </li>
-          <li class="user-menu__item-cart">
+          <li class="user-menu-item user-menu__item-cart">
             <a class="link-cart user-menu__link user-menu__link--theme--bright" href="#">Корзина</a>
           </li>
         </ul>
       </div>
       <!-- middle row-->
       <div class="bar info-bar footer__info-bar">
-        <p class="info-bar__text">г. Москва, ул. Строителей, 15</p>
+        <p class="info-bar__text address">г. Москва, ул. Строителей, 15</p>
         <ul class="info-menu">
           <li class="info-menu__item">
             <a class="info-menu__link" href="#">Доставка</a>
@@ -275,10 +279,10 @@
             <a class="info-menu__link" href="#">Гарантия</a>
           </li>
           <li class="info-menu__item">
-            <a class="info-menu__link info-menu__link-contacts" href="#">Контакты</a>
+            <a class="info-menu__link" href="#">Контакты</a>
           </li>
         </ul>
-        <p class="info-bar__text">
+        <p class="info-bar__text phone">
           Тел.: <a class="info-bar__link" href="tel:+74954959595">+7 (495) 495-95-95</a>
         </p>
       </div>
@@ -301,8 +305,7 @@
       </div>
     </div>
   </footer>
-  
-<!--  <script src="http://pixp.fdrv.guru/pixp.js" type="text/javascript"></script> -->
+
 </body>
 
 </html>

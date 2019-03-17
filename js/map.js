@@ -22,8 +22,10 @@
         evt.preventDefault();
         if (popupMap.classList.contains("modal-show-map")) {
           popupMap.classList.add("modal-close-map");
-          setTimeout(function(){$(popupMap).removeClass("modal-show-map");},600);
-          setTimeout(function(){$(popupMap).removeClass("modal-close-map");},600);
+          setTimeout(function(){
+            popupMap.classList.remove("modal-show-map");
+            popupMap.classList.remove("modal-close-map");
+          }, 600);
         }
       }
     });

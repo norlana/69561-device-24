@@ -5,11 +5,18 @@
   <meta charset="UTF-8">
   <title>Device - официальный магазин</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="home-page">
+ <svg class="svg-filter" width="0" height="0" tabindex="-1">
+   <defs>
+     <filter id="grayscale">
+      <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" /> 
+     </filter>
+   </defs>
+ </svg>
   <div class="container">
     <header class="header">
       <h1 class="visually-hidden">
@@ -43,8 +50,8 @@
       <!-- bottom row-->
       <nav class="bar main-bar">
         <ul class="main-menu">
-          <li class="main-menu__item-catalog main-menu__item-catalog--dropdown">
-            <a class="main-menu__link" href="#">Каталог товаров</a>
+          <li class="main-menu-item item-dropdown main-menu__item-catalog">
+            <a class="item-dropdown-link main-menu__link" href="#">Каталог товаров</a>
             <ul class="submenu main-menu__submenu">
               <li class="submenu__item">
                 <a class="submenu__link" href="catalog/virtual.html">Виртуальная реальность</a>
@@ -60,13 +67,13 @@
               </li>
             </ul>
           </li>
-          <li class="main-menu__item-delivery">
+          <li class="main-menu-item main-menu__item-delivery">
             <a class="main-menu__link" href="#">Доставка</a>
           </li>
-          <li class="main-menu__item-warranty">
+          <li class="main-menu-item main-menu__item-warranty">
             <a class="main-menu__link" href="#">Гарантия</a>
           </li>
-          <li class="main-menu__item-contacts">
+          <li class="main-menu-item main-menu__item-contacts">
             <a class="main-menu__link" href="#">Контакты</a>
           </li>
         </ul>
@@ -83,11 +90,12 @@
       <input class="visually-hidden" tabindex="-1" type="radio" name="point" id="radio-2">
       <input class="visually-hidden" tabindex="-1" type="radio" name="point" id="radio-3">
       <div class="hero__slider">
-        <article class="hero__slide-first slide" id="slide-1">
-          <div class="slide__description slide__description--first">
-            <h3 class="slide__title">Делай селфи,<br> как Бен Стиллер!</h3>
-            <p class="slide__text slide__text--first">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a href="#" class="slide__button button button--size--l">ПОДРОБНЕЕ</a>
+        <article class="slide-first hero__slide" id="slide-1">
+          <div class="slide-description slide-first__description">
+            <h3 class="slide-title">Делай селфи,<br> как Бен Стиллер!</h3>
+            <p class="slide__text slide__text--first">
+            Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a href="#" class="slide__button button">ПОДРОБНЕЕ</a>
             <table class="slide__info product-info">
               <tr class="product-info__row product-info__row--type--value">
                 <td class="product-info__cell product-info__cell--value">8,5 м</td>
@@ -105,11 +113,11 @@
             <img src="img/hero-slider/slide-1.png" alt="Длинный монопод" width="384" height="486">
           </div>
         </article>
-        <article class="hero__slide-second slide" id="slide-2">
-          <div class="slide__description slide__description--second">
-            <h3 class="slide__title">Худеем<br> правильно!</h3>
+        <article class="slide-second hero__slide" id="slide-2">
+          <div class="slide-second__description slide-description">
+            <h3 class="slide-title">Худеем<br> правильно!</h3>
             <p class="slide__text slide__text--second">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a href="#" class="slide__button button button--size--l">ПОДРОБНЕЕ</a>
+            <a href="#" class="slide__button button">ПОДРОБНЕЕ</a>
             <table class="slider__info product-info">
               <tr class="product-info__row product-info__row--type--value">
                 <td class="product-info__cell product-info__cell--value">48 часов</td>
@@ -123,11 +131,11 @@
             <img src="img/hero-slider/slide-2.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
           </div>
         </article>
-        <article class="hero__slide-third slide" id="slide-3">
-          <div class="slide__description slide__description--third">
-            <h3 class="slide__title">Порхает как бабочка,<br> жалит как пчела!</h3>
+        <article class="slide-third hero__slide" id="slide-3">
+          <div class="slide-third__description slide-description">
+            <h3 class="slide-title">Порхает как бабочка,<br> жалит как пчела!</h3>
             <p class="slide__text slide__text--third">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a href="#" class="slide__button button button--size--l">ПОДРОБНЕЕ</a>
+            <a href="#" class="slide__button button">ПОДРОБНЕЕ</a>
             <table class="slider__info product-info">
               <tr class="product-info__row product-info__row--type--value">
                 <td class="product-info__cell product-info__cell--value">800 м</td>
@@ -145,13 +153,13 @@
         </article>
         <ul class="hero__controls">
           <li class="hero__item">
-            <label class="button-hero" tabindex="0" for="radio-1"></label>
+            <label class="button-hero" for="radio-1"></label>
           </li>
           <li class="hero__item">
-            <label class="button-hero" tabindex="0" for="radio-2"></label>
+            <label class="button-hero" for="radio-2"></label>
           </li>
           <li class="hero__item">
-            <label class="button-hero" tabindex="0" for="radio-3"></label>
+            <label class="button-hero" for="radio-3"></label>
           </li>
         </ul>
       </div>
@@ -164,7 +172,7 @@
           <a class="popular-list__link virtual" href="#">Виртуальная реальность</a>
         </li>
         <li class="popular-list__item">
-          <a class="popular-list__link monopod" href="#">Моноподы<br> для селфи</a>
+          <a class="popular-list__link monopod" href="#">Моноподы для селфи</a>
         </li>
         <li class="popular-list__item">
           <a class="popular-list__link camera" href="#">Экшн-камеры</a>
@@ -188,15 +196,15 @@
         <input class="services__input visually-hidden" type="radio" name="services-radio" id="warranty">
         <input class="services__input visually-hidden" type="radio" name="services-radio" id="credit">
         <div class="services-controls">
-          <label class="services-controls__button button button--size--s" for="delivery">ДОСТАВКА</label>
-          <label class="services-controls__button button button--size--s" for="warranty">ГАРАНТИЯ</label>
-          <label class="services-controls__button button button--size--s" for="credit">КРЕДИТ</label>
+          <label class="services-controls__button button" for="delivery">ДОСТАВКА</label>
+          <label class="services-controls__button button" for="warranty">ГАРАНТИЯ</label>
+          <label class="services-controls__button button" for="credit">КРЕДИТ</label>
         </div>
         <section class="services__content delivery">
           <h3 class="services__title">
             Доставка
           </h3>
-          <p class="services__text-delivery">
+          <p class="services-text services__text-delivery">
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </section>
@@ -204,15 +212,15 @@
           <h3 class="services__title">
             Гарантия
           </h3>
-          <p class="services__text-warranty">
-            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.
+          <p class="services-text services__text-warranty">
+            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.
           </p>
         </section>
         <section class="services__content credit">
           <h3 class="services__title">
             Кредит
           </h3>
-          <p class="services__text-credit">
+          <p class="services-text services__text-credit">
             Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
           </p>
         </section>
@@ -223,65 +231,45 @@
       <h2 class="visually-hidden">Наши брендовые поставщики</h2>
       <a class="suppliers__link" href="#">
         <svg width="260" height="100" viewbox="0 0 260 100">
-          <defs>
-            <filter id="grayscale-dji">
-              <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />
-            </filter>
-          </defs>
-          <image class="grayscale dji" xlink:href="img/suppliers/DJI.png" width="260" height="100" />
+          <image class="grayscale" xlink:href="img/suppliers/DJI.png" width="260" height="100" />
         </svg>
       </a>
       <a class="suppliers__link" href="#">
         <svg width="260" height="100" viewbox="0 0 260 100">
-          <defs>
-            <filter id="grayscale-sp">
-              <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />
-            </filter>
-          </defs>
-          <image class="grayscale spgadjets" xlink:href="img/suppliers/SPgadgets.png"  width="260" height="100" />
+          <image class="grayscale" xlink:href="img/suppliers/SPgadgets.png"  width="260" height="100" />
         </svg>
       </a>
       <a class="suppliers__link" href="#">
         <svg width="260" height="100" viewbox="0 0 260 100">
-          <defs>
-            <filter id="grayscale-gopro">
-              <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />
-            </filter>
-          </defs>
-          <image class="grayscale gopro" xlink:href="img/suppliers/GoPro.png" width="260" height="100" />
+          <image class="grayscale" xlink:href="img/suppliers/GoPro.png" width="260" height="100" />
         </svg>
       </a>
       <a class="suppliers__link" href="#">
         <svg width="260" height="100" viewbox="0 0 260 100">
-          <defs>
-            <filter id="grayscale-vive">
-              <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />
-            </filter>
-          </defs>
-          <image class="grayscale vive" xlink:href="img/suppliers/VIVE.png" width="260" height="100" />
+          <image class="grayscale" xlink:href="img/suppliers/VIVE.png" width="260" height="100" />
         </svg>
       </a>
     </section>
     <!--     INFORMATION       -->
     <div class="information container">
-      <section class="information__column about-us">
+      <section class="about-us information__column">
         <h2 class="information__title">О нас</h2>
         <p class="information__text information__text--about-us">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p class="information__text information__text--about-us">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
         <ul class="information__list">
-          <li class="information__item"><a class="information__link" href="#">Деловые линии</a></li>
+          <li class="information__item"><a class="information__link" href="#">Деловые Линии</a></li>
           <li class="information__item"><a class="information__link" href="#">Автотрейдинг</a></li>
           <li class="information__item"><a class="information__link" href="#">ЖелДорЭкспедиция</a></li>
         </ul>
-        <a class="about-button button button--size--xl" href="#">ПОДРОБНЕЕ О НАС</a>
+        <a class="about-button button" href="#">ПОДРОБНЕЕ О НАС</a>
       </section>
-      <section class="information__column contacts">
+      <section class="contacts information__column">
         <h2 class="information__title">Контакты</h2>
         <p class="information__text information__text--contacts">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="map-link" href="#">
+        <a class="map-link information__link-map" href="https://yandex.ru/maps/213/moscow/?ll=37.529654%2C55.686980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.529655%252C55.686981%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%25A1%25D1%2582%25D1%2580%25D0%25BE%25D0%25B8%25D1%2582%25D0%25B5%25D0%25BB%25D0%25B5%25D0%25B9%252C%252015%2520&z=17">
           <img class="map__image" src="img/information/map.jpg" alt="Адрес нашей компании: г. Москва, ул. Строителей 15" width="560" height="222">
         </a>
-        <a class="contacts-button button button--size--xl" href="#">НАПИШИТЕ НАМ</a>
+        <a class="contacts-button button" href="form.html">НАПИШИТЕ НАМ</a>
       </section>
     </div>
   </main>
@@ -310,7 +298,7 @@
       </div>
       <!-- middle row-->
       <div class="bar info-bar footer__info-bar">
-        <p class="info-bar__text">г. Москва, ул. Строителей, 15</p>
+        <p class="info-bar__text address">г. Москва, ул. Строителей, 15</p>
         <ul class="info-menu">
           <li class="info-menu__item">
             <a class="info-menu__link" href="#">Доставка</a>
@@ -319,10 +307,10 @@
             <a class="info-menu__link" href="#">Гарантия</a>
           </li>
           <li class="info-menu__item">
-            <a class="info-menu__link info-menu__link-contacts" href="#">Контакты</a>
+            <a class="info-menu__link" href="#">Контакты</a>
           </li>
         </ul>
-        <p class="info-bar__text">
+        <p class="info-bar__text phone">
           Тел.: <a class="info-bar__link" href="tel:+74954959595">+7 (495) 495-95-95</a>
         </p>
       </div>
@@ -354,7 +342,7 @@
         <ul class="feedback-form__list">
           <li class="feedback-form__item">
             <label class="feedback-form__caption" for="name-field">Ваше имя:
-              <input class="feedback-form__input feedback-field" id="name-field" type="text" name="name" placeholder="Имя Фамилия" pattern="([А-Яа-яЁё\s]+$)">
+              <input class="feedback-form__input feedback-field" id="name-field" type="text" name="name" placeholder="Имя Фамилия" pattern="([A-Za-zА-Яа-яЁё\s]+$)">
             </label>
             <label class="feedback-form__caption" for="email-field">Ваш e-mail:
               <input class="feedback-form__input feedback-field" id="email-field" type="email" name="email" placeholder="email@example.com" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
@@ -366,7 +354,7 @@
             </label>
           </li>
         </ul>
-        <button class="feedback-form__button button button--size--m" type="submit">Отправить</button>
+        <button class="feedback-form__button button" type="submit">Отправить</button>
       </form>
     </section>
   </div>
